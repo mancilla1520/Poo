@@ -1,8 +1,11 @@
 package Platzi.Ui;
 
+import Platzi.Patient;
+
 import java.util.Scanner;
 
     public class UIMenu {
+        private Patient patient;
         public static final String[] MONTHS = {"Enero", "Febrero", "Marzo", "Abril", "Mayo" , "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
 
         public static void showMenu(){
@@ -12,7 +15,7 @@ import java.util.Scanner;
             int response = 0;
             do {
                 System.out.println("1. Doctor");
-                System.out.println("2. Patient");
+                System.out.println("2. Platzi.Patient");
                 System.out.println("0. Salir");
 
                 Scanner sc = new Scanner(System.in);
@@ -41,7 +44,7 @@ import java.util.Scanner;
             int response = 0;
             do {
                 System.out.println("\n");
-                System.out.println("Patient");
+                System.out.println("Platzi.Patient");
                 System.out.println("1. Book an appointment");
                 System.out.println("2. My appointments");
                 System.out.println("0. Return");
@@ -66,6 +69,8 @@ import java.util.Scanner;
                 }
             }while (response != 0);
         }
+
+
     }
 
 
