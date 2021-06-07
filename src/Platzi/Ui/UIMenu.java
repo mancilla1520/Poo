@@ -1,6 +1,6 @@
 package Platzi.Ui; //Clase para el menu
 
-import Platzi.Patient;
+import model.Patient;
 
 import java.util.Scanner;
 
@@ -15,7 +15,7 @@ import java.util.Scanner;
             int response = 0;
             do {
                 System.out.println("1. Doctor");
-                System.out.println("2. Platzi.Patient");
+                System.out.println("2. model.Patient");
                 System.out.println("0. Salir");
 
                 Scanner sc = new Scanner(System.in);
@@ -44,7 +44,7 @@ import java.util.Scanner;
             int response = 0;
             do {
                 System.out.println("\n");
-                System.out.println("Platzi.Patient");
+                System.out.println("model.Patient");
                 System.out.println("1. Book an appointment");
                 System.out.println("2. My appointments");
                 System.out.println("0. Return");

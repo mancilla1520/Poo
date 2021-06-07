@@ -1,4 +1,4 @@
-package Platzi;
+package model;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -7,7 +7,7 @@ public class Doctor extends User{ //Sub Clase
     private String speciality; //Especialidad del doctor
 
 
-    Doctor(String name, String email) { //Constructor
+    public Doctor(String name, String email) { //Constructor
         super(name, email); //metodo super-
         System.out.println("El nombre del Doctor asignado es: " + name);
         this.speciality = speciality;

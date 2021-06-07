@@ -1,4 +1,4 @@
-package Platzi;
+package model;
 
 public class Patient extends User{
     private String birthday;
