@@ -3,50 +3,46 @@ import java.util.ArrayList;
 import java.util.Date;
 
 
-public class Doctor {
-    //Atributos
-    static int id = 0;
-    private String name;
-    private String email;
-    private String speciality;
+public class Doctor extends User{ //Sub Clase
+    private String speciality; //Especialidad del doctor
 
 
-    Doctor(){
-        System.out.println("Construyendo el Objeto Doctor");
+    Doctor(String name, String email) { //Constructor
+        super(name, email); //metodo super-
+        System.out.println("El nombre del Doctor asignado es: " + name);
+        this.speciality = speciality;
+    }
+    //get y set de speciality
+    public String getSpeciality() {
+        return speciality;
     }
 
-    Doctor(String name, String speciality) {
-        System.out.println("El nombre del Doctor asignado es: " + name);
-        id++;
-        this.name = name;
+    public void setSpeciality(String speciality) {
         this.speciality = speciality;
     }
 
-    //Comportamientos
-    public void showName(){
-        System.out.println(name);
-    }
-
+    //Array dinamico para las horas disponibles
     ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
-    public void horaDisponible(Date date, String time){
+    public void horaDisponible(Date date, String time){ //metodo para agregar las horas
         availableAppointments.add(new Doctor.AvailableAppointment(date , time));
-
     }
 
     public ArrayList<AvailableAppointment> getAvailableAppointments(){
         return availableAppointments;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "\nSpeciality: "+ speciality + "\nAvailable: "+ "\n"+ availableAppointments.toString();
+    }
 
-
-
-    public static class AvailableAppointment{
+    public static class AvailableAppointment{ //Clase anidada
 
         private int id;
         private Date date;
         private String time;
 
-        public AvailableAppointment(Date date, String time) {
+        public AvailableAppointment(Date date, String time) { //Constructor de la clase anidada
             this.date = date;
             this.time = time;
         }
@@ -74,8 +70,11 @@ public class Doctor {
         public void setTime(String time) {
             this.time = time;
         }
+
+        @Override
+        public String toString() {
+            return "Available Appointments \nDate: " + date + "\nTime: "+ time;
+        }
     }
-
-
 
 }

@@ -1,4 +1,4 @@
-package Platzi.Ui;
+package Platzi.Ui; //Clase para el menu
 
 import Platzi.Patient;
 
