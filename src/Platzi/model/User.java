@@ -1,6 +1,6 @@
-package model;
+package Platzi.model;
 
-public class User {
+public abstract class User {
     private int id;
     private String name;
     private String email;
@@ -62,4 +62,6 @@ public class User {
         return "user: " + name + ", Email: " + email+
                 "\naddress: " +address + ", Phone: "+ phoneNumber;
     }
+
+    public abstract void showDataUser();
 }

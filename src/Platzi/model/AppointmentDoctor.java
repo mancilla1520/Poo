@@ -1,13 +1,12 @@
-package model;
+package Platzi.model;
 import java.util.Date;
 
-public class AppointmentNurse implements ISchedulable{
+public class AppointmentDoctor implements ISchedulable{
     private int id;
     private Patient patient;
-    private Nurse nurse;
+    private Doctor doctor;
     private Date date;
     private String time;
-
 
     public int getId() {
         return id;
@@ -25,12 +24,12 @@ public class AppointmentNurse implements ISchedulable{
         this.patient = patient;
     }
 
-    public Nurse getNurse() {
-        return nurse;
+    public Doctor getDoctor() {
+        return doctor;
     }
 
-    public void setNurse(Nurse nurse) {
-        this.nurse = nurse;
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
     }
 
     public Date getDate() {
@@ -51,6 +50,5 @@ public class AppointmentNurse implements ISchedulable{
 
     @Override
     public void schedule(Date date, String time) {
-
     }
 }
