@@ -7,7 +7,9 @@ import java.util.Date;
 
 public class Doctor extends User{ //Sub Clase
     private String speciality; //Especialidad del doctor
-
+    public ArrayList<AvailableAppointment> getAvailableAppointments(){
+        return availableAppointments;
+    }
 
     public Doctor(String name, String email) { //Constructor
         super(name, email); //metodo super-
@@ -29,9 +31,7 @@ public class Doctor extends User{ //Sub Clase
         availableAppointments.add(new Doctor.AvailableAppointment(date , time));
     }
 
-    public ArrayList<AvailableAppointment> getAvailableAppointments(){
-        return availableAppointments;
-    }
+
 
     @Override
     public String toString() {
@@ -68,11 +68,11 @@ public class Doctor extends User{ //Sub Clase
             this.id = id;
         }
 
-        public Date getDate() {
+        public Date getDate(String DATE) {
             return date;
         }
 
-        public String getDate(String DATE) {
+        public String getDate() {
 
             return format.format(date);
         }

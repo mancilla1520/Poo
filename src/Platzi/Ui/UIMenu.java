@@ -80,7 +80,7 @@ import java.util.Scanner;
                             emailCorrect = true;
                             //Obtener el usuario logeado
                             patientLogged = p;
-                            //mostrar el menu del doctor
+                            UIPatientMenu.showPatientMenu();
                         }
                     }
                 }

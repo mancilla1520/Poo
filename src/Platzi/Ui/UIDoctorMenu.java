@@ -79,7 +79,7 @@ public class UIDoctorMenu {
                 }while (responseTime == 2);
 
                 UIMenu.doctorLogged.horaDisponible(date , time);
-                chechDoctorAvailableAppointments(UIMenu.doctorLogged);
+                checkDoctorAvailableAppointments(UIMenu.doctorLogged);
 
             }else if(response==0){
                 showDoctoMenu();
@@ -89,7 +89,7 @@ public class UIDoctorMenu {
 
     }
 
-    private static void chechDoctorAvailableAppointments(Doctor doctor){
+    private static void checkDoctorAvailableAppointments(Doctor doctor){
         if (doctor.getAvailableAppointments().size() > 0 && !doctorsAvailableAppointments.contains(doctor)){
             doctorsAvailableAppointments.add(doctor);
         }
